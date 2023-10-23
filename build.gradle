@@ -25,6 +25,12 @@ dependencies {
 
 }
 
+tasks.jar{
+	manifest {
+		attributes["Main-Class"]  = "duarte.marcos.SantanderBootcamp2023Application"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
