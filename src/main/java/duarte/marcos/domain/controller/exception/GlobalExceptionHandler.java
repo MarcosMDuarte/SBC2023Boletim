@@ -22,12 +22,12 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<String> handleNotFoundException(NoSuchElementException notFoundException){
-        return new ResponseEntity<>("Resource ID not found", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("ID não localizado", HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(Throwable.class)
     public ResponseEntity<String> handleUnexpectedException(Throwable unexpectedException){
-        String message = "Unexpected server error, see the logs.";
+        String message = "Erro inesperado, verifique os logs.";
         logger.error(message, unexpectedException);
         return new ResponseEntity<>(message, HttpStatus.INTERNAL_SERVER_ERROR);
     }

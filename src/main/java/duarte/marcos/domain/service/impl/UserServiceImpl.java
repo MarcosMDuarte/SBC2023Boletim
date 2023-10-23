@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Alunos create(Alunos alunosToCreate) {
         if(userRepository.existsByCarteirinhaNumber(alunosToCreate.getCarteirinha().getNumber())){
-            throw new IllegalArgumentException("This Account number already exists.");
+            throw new IllegalArgumentException("Numero de matrícula já existente.");
         }
         return userRepository.save(alunosToCreate);
     }
