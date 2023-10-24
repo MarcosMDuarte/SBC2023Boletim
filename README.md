@@ -3,7 +3,7 @@ Projeto de API RESTful para boletim anual com o objetivo de entrega do projeto f
 
 ``` mermaid
 classDiagram
-  class Student {
+  class Alunos {
     - name: string
     - boletim: Boletim
     - carteirinha: Carteirinha
@@ -34,7 +34,7 @@ classDiagram
     - description: string
   }
 
-  Student "1" --> "1" Boletim
-  Student "1" --> "1" Carteirinha
-  Student "1" --> "0..*" Aviso
+  Alunos "1" --> "1" Boletim
+  Alunos "1" --> "1" Carteirinha
+  Alunos "1" --> "0..*" Aviso
 ```
